@@ -1230,11 +1230,11 @@ public class SettingsActivity extends Activity
                     boolean hasDeviceKeys = getResources().getInteger(
                             com.android.internal.R.integer.config_deviceHardwareKeys) != 0;
                     if (!hasDeviceKeys) {
-                        removeTile = true;
+                        removeTile = false;
                     }
                 } else if (id == R.id.performance_settings) {
                     if (!(pm.hasPowerProfiles() || (showDev && !Build.TYPE.equals("user")))) {
-                        removeTile = true;
+                        removeTile = false;
                     }
                 }
 
